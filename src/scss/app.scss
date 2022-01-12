@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//sick
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    @apply mx-auto;
+}
+
+.button-shadow{
+    box-shadow: 0 1px 10px rgb(0 0 0 / 70%) !important;
+}
+.default-shadow{
+    box-shadow: 0 1px 10px rgb(0 0 0 / 50%) !important;
+}
+.smooth-transition{
+    transition: 0.4s all ease-in-out;
+}
+
+.primary-button{
+    @apply flex items-center px-2 py-2 bg-primary text-white text-sm xl:text-base uppercase tracking-wide shadow;
+
+    &:hover{
+        @apply rounded-lg;
+    }
+}
+
+
+//hero slider css
+.slider-section{
+    @apply bg-black
+     relative;
+}
+
+.slider-shadow{
+    box-shadow: 0 12px 35px rgb(0 0 0 / 50%);
+}
+
+
+.features-title{
+    @apply inline-block bg-white relative z-10 text-xl lg:text-3xl xl:text-4xl tracking-wide text-center uppercase;
+}
+
+
+.search-from{
+    @apply mb-8 lg:mb-0 w-full max-w-[280px] xl:max-w-[320px] flex items-center flex-shrink-0 lg:order-2;
+
+    .search-input{
+        @apply w-full h-12 px-4 py-2.5 flex-grow text-sm lg:text-base text-[#7f7e7e] border border-[#7f7e7e] border-r-0 focus:border-primary ring-0 focus:ring-2 focus:ring-primary focus:ring-opacity-20 outline-none focus:outline-none;
+    }
+}
+
+.features-line{
+    @apply h-[2px] w-full bg-black block absolute top-1/2 left-0 transform -translate-y-1/2;
+}
+
+.features-section{
+    @apply py-10 lg:py-14 flex flex-wrap items-center justify-center lg:justify-between;
+
+    & > ul{
+        @apply flex flex-wrap items-center justify-center lg:justify-start justify-center xl:flex-grow space-x-2 lg:order-1;
+    }
+}
+
+
+.logo-slider,
+.cars-slider{
+    .slick-list{
+        @apply relative;
+        &:before, &:after{
+            @apply w-16 md:w-48 h-full absolute top-0 z-10;
+        }
+
+        &:before{
+            content: "";
+            @apply left-0;
+            background: -webkit-linear-gradient(left, white 0%, white 17%, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0) 90%)
+        }
+
+        &:after{
+            content: "";
+            @apply right-0;
+            background: -webkit-linear-gradient(right, white 0%, white 17%, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0) 90%)
+        }
+    }
+}
+
+.logo-slider,
+.cars-slider,
+.highlight-slider{
+    @apply mb-10 md:mb-16;
+
+    .slick-track{
+        @apply py-6;
+    }
+    .slick-prev, .slick-next{
+        @apply w-12 h-12 z-[99];
+        &:before{
+            @apply hidden;
+        }
+    }
+    .slick-next{
+        right: 25px;
+    }
+    .slick-prev{
+        left: 25px;
+    }
+}
+
+.logo-card{
+    @apply px-4 md:px-6 flex items-center justify-center h-[200px] md:h-[200px] min-w-[280px] bg-white text-2xl lg:text-3xl xl:text-4xl text-primary uppercase tracking-[.25em] border border-primary transition duration-500 ease-in-out;
+
+    &:hover{
+        box-shadow: 0 1px 15px rgb(0 0 0 / 60%);
+        span{
+            text-shadow: 0 1px 6px rgb(0 0 0 / 45%);
+        }
+    }
+}
+
+
+.car-card{
+    @apply flex flex-col justify-center min-w-[280px] bg-white text-2xl lg:text-3xl xl:text-4xl text-primary uppercase tracking-[.25em] border border-primary transition duration-500 ease-in-out;
+
+    &:hover{
+        box-shadow: 0 1px 15px rgb(0 0 0 / 60%);
+    }
+    .car-img{
+        @apply py-6 px-4 md:px-6 h-[180px] flex items-center justify-center;
+        img{
+            @apply max-h-[130px];
+        }
+    }
+    .card-body{
+        @apply px-4 py-3 text-sm bg-primary text-white text-center uppercase tracking-wide;
+    }
+}
+
+.category-box{
+    @apply flex items-center border-2 border-primary relative;
+    .category-icon{
+        @apply flex-shrink-0 w-12 h-full min-h-[3rem] flex items-center justify-center bg-primary;
+        img{
+            @apply max-h-[2.5rem]
+        }
+    }
+    .category-name{
+        @apply flex-grow px-4 py-1 text-center text-black text-base md:text-lg lg:text-xl uppercase tracking-widest transition duration-500 ease-in-out delay-100;
+    }
+
+    &:before{
+        content: "";
+        @apply block w-0 h-full bg-primary absolute left-0 top-0 z-[-1];
+        transition: 0.3s all ease-in-out;
+    }
+
+    &:hover{
+        &:before{
+            @apply w-full;
+        }
+        .category-name{
+            @apply text-white;
+        }
+    }
+}
+
+
+
+/* highlight card */
+.highlight-card{
+    box-shadow: 0 1px 8px rgb(0 0 0 / 40%);
+
+    .highlight-img{
+        @apply h-[300px] overflow-hidden;
+    }
+    .highlight-body{
+        background-image: url("../../assets/images/highlight-texture.png");
+        background-color: #ffffff;
+        @apply px-4 py-6 lg:px-6 lg:py-8 text-[#686868] uppercase border-b-2 border-primary;
+
+        .body-title{
+            @apply block text-lg xl:text-2xl mb-4 md:mb-8 transition duration-500 ease-in-out;
+        }
+    }
+
+    &:hover{
+        .highlight-img img{
+            @apply transform scale-110;
+        }
+        .body-title{
+            @apply text-primary;
+        }
+    }
+}
+/* END highlight card */
+
+
+
+
+/* news card */
+.news-card{
+    box-shadow: 0 1px 12px rgb(0 0 0 / 50%);
+    @apply flex flex-wrap mb-10 md:mb-12 xl:mb-16 transition duration-300;
+
+    &:hover{
+        box-shadow: 0 1px 20px rgb(0 0 0 / 70%);
+        .news-card-img img{
+            @apply transform scale-110;
+        }
+    }
+    .news-card-img{
+        @apply flex-shrink-0 w-full md:w-2/5 overflow-hidden;
+
+        img{
+            @apply transition duration-500 ease-in-out;
+        }
+    }
+
+    .news-card-body{
+        background-image: url("../../assets/images/highlight-texture.png");
+        background-color: #ffffff;
+        @apply px-4 md:px-6 lg:px-8 xl:px-10 py-6 md:pt-8 xl:pt-10 pb-6 flex-grow w-full md:w-1/2 bg-white text-cool-gray;
+
+        .card-title{
+            @apply md:mt-4 mb-4 md:mb-6 block text-xl md:text-2xl font-bold uppercase text-black hover:text-primary transition;
+            &:hover{
+                @apply underline;
+            }
+        }
+    }
+
+    .read-more-btn{
+        @apply mt-8 md:mt-10 xl:mt-14 pl-8 pr-10 py-3 inline-block text-white uppercase font-bold tracking-wide;
+        background: -webkit-linear-gradient(-20deg, rgba(59,59,59,1) 0%,rgba(59,59,59,1) 84%,rgba(183,0,0,1) 84%,rgba(183,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        clip-path: polygon(11% 0, 100% 0%, 89% 100%, 0% 100%);
+        transition: 0.3s all ease-in-out;
+
+        &:hover{
+            background: -webkit-linear-gradient(-20deg, rgba(59,59,59,1) 0%,rgba(59,59,59,1) 1%,rgba(183,0,0,1) 1%,rgba(183,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        }
+    }
+
+    .news-date{
+        @apply w-20 md:w-24 h-20 md:h-24 p-4 md:py-6 bg-primary text-white uppercase text-sm md:text-base font-bold tracking-wide text-center absolute z-10 right-0 top-0 md:top-16 transform -translate-y-full;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    &.img-in-right{
+        .news-card-body{
+            @apply md:order-1 md:pr-20 xl:pr-28;
+        }
+        .news-card-img{
+            @apply md:order-2;
+        }
+        .news-date{
+            @apply md:right-0 md:transform md:translate-x-1/2 md:-translate-y-0;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+    }
+
+    &.img-in-left{
+        .news-card-body{
+            @apply md:order-2 md:pl-20 xl:pl-28;
+        }
+        .news-card-img{
+            @apply md:order-1;
+        }
+        .news-date{
+            @apply md:left-0 md:transform md:-translate-x-1/2 md:-translate-y-0;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        .read-more-btn{
+            @apply md:float-right;
+        }
+    }
+}
+/* END news card */
+
+@media screen and (max-width: 767px){
+    .news-date{
+        clip-path: none !important;
+    }
+}
+
+// pagination css
+.pagination{
+    li{
+        a.pagination-item{
+            @apply w-10 h-10 md:h-12 bg-white text-cool-gray border-b-4 border-gray-300 flex items-center justify-center transition duration-500 ease-in-out uppercase text-sm font-semibold;
+
+            &:hover,
+            &.active{
+                @apply bg-[#222222] border-primary text-white;
+            }
+        }
+        a.pagination-next,
+        a.pagination-prev{
+            @apply px-4 w-auto;
+        }
+    }
+}
+// END pagination css
