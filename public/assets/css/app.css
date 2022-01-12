@@ -405,6 +405,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .right-0{
   right: 0px;
 }
+.top-full{
+  top: 100%;
+}
+.right-20{
+  right: 5rem;
+}
 .right-2{
   right: 0.5rem;
 }
@@ -439,6 +445,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-2{
   margin-bottom: 0.5rem;
+}
+.mt-20{
+  margin-top: 5rem;
 }
 .mb-1{
   margin-bottom: 0.25rem;
@@ -509,6 +518,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[560px\]{
   height: 560px;
 }
+.h-\[450px\]{
+  height: 450px;
+}
+.h-\[400px\]{
+  height: 400px;
+}
+.h-\[350px\]{
+  height: 350px;
+}
 .max-h-\[2\.5rem\]{
   max-height: 2.5rem;
 }
@@ -517,6 +535,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .min-h-\[3rem\]{
   min-height: 3rem;
+}
+.min-h-\[500px\]{
+  min-height: 500px;
 }
 .w-full{
   width: 100%;
@@ -548,6 +569,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[512px\]{
   width: 512px;
 }
+.w-7\/12{
+  width: 58.333333%;
+}
 .min-w-\[280px\]{
   min-width: 280px;
 }
@@ -556,6 +580,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-\[280px\]{
   max-width: 280px;
+}
+.max-w-\[90\%\]{
+  max-width: 90%;
 }
 .max-w-full{
   max-width: 100%;
@@ -743,6 +770,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pr-10{
   padding-right: 2.5rem;
+}
+.pb-10{
+  padding-bottom: 2.5rem;
 }
 .text-center{
   text-align: center;
@@ -1613,6 +1643,51 @@ body {
 
 /* END highlight card */
 /* news card */
+.news-date{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+  height: 5rem;
+  width: 5rem;
+  --tw-translate-y: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(183 0 0 / var(--tw-bg-opacity));
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+@media (min-width: 768px){
+  .news-date{
+    top: 4rem;
+  }
+  .news-date{
+    height: 6rem;
+  }
+  .news-date{
+    width: 6rem;
+  }
+  .news-date{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .news-date{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.news-date {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
 .news-card {
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
   margin-bottom: 2.5rem;
@@ -1624,11 +1699,13 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
+
 @media (min-width: 768px){
   .news-card{
     margin-bottom: 3rem;
   }
 }
+
 @media (min-width: 1280px){
   .news-card{
     margin-bottom: 4rem;
@@ -1769,50 +1846,6 @@ body {
   background: -webkit-linear-gradient(-20deg, #3b3b3b 0%, #3b3b3b 1%, #b70000 1%, #b70000 100%);
   /* Chrome10-25,Safari5.1-6 */
 }
-.news-card .news-date{
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  z-index: 10;
-  height: 5rem;
-  width: 5rem;
-  --tw-translate-y: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-bg-opacity: 1;
-  background-color: rgb(183 0 0 / var(--tw-bg-opacity));
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-@media (min-width: 768px){
-  .news-card .news-date{
-    top: 4rem;
-  }
-  .news-card .news-date{
-    height: 6rem;
-  }
-  .news-card .news-date{
-    width: 6rem;
-  }
-  .news-card .news-date{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  .news-card .news-date{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-.news-card .news-date {
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
 @media (min-width: 768px){
   .news-card.img-in-right .news-card-body{
     order: 1;
@@ -1939,6 +1972,16 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+.news-detail-banner {
+  box-shadow: 0 1px 25px rgba(0, 0, 0, 0.6);
+}
+.news-detail-banner .news-date{
+  top: 100%;
+  right: 5rem;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(183 0 0 / var(--tw-text-opacity));
@@ -2017,8 +2060,14 @@ body {
   .md\:h-12{
     height: 3rem;
   }
+  .md\:h-\[450px\]{
+    height: 450px;
+  }
   .md\:w-48{
     width: 12rem;
+  }
+  .md\:w-24{
+    width: 6rem;
   }
   .md\:w-2\/5{
     width: 40%;
@@ -2026,11 +2075,11 @@ body {
   .md\:w-1\/2{
     width: 50%;
   }
-  .md\:w-24{
-    width: 6rem;
-  }
   .md\:w-auto{
     width: auto;
+  }
+  .md\:max-w-\[90\%\]{
+    max-width: 90%;
   }
   .md\:translate-x-1\/2{
     --tw-translate-x: 50%;
@@ -2065,6 +2114,10 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  .md\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
   .md\:pt-8{
     padding-top: 2rem;
   }
@@ -2074,6 +2127,9 @@ body {
   .md\:pl-20{
     padding-left: 5rem;
   }
+  .md\:pb-20{
+    padding-bottom: 5rem;
+  }
   .md\:text-left{
     text-align: left;
   }
@@ -2081,13 +2137,13 @@ body {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-  .md\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 @media (min-width: 1024px){
@@ -2097,11 +2153,23 @@ body {
   .lg\:mb-10{
     margin-bottom: 2.5rem;
   }
+  .lg\:mb-16{
+    margin-bottom: 4rem;
+  }
   .lg\:h-8{
     height: 2rem;
   }
+  .lg\:h-\[550px\]{
+    height: 550px;
+  }
   .lg\:w-8{
     width: 2rem;
+  }
+  .lg\:w-7\/12{
+    width: 58.333333%;
+  }
+  .lg\:w-5\/12{
+    width: 41.666667%;
   }
   .lg\:min-w-\[120px\]{
     min-width: 120px;
@@ -2161,6 +2229,9 @@ body {
   }
   .xl\:mt-10{
     margin-top: 2.5rem;
+  }
+  .xl\:h-\[650px\]{
+    height: 650px;
   }
   .xl\:max-w-\[320px\]{
     max-width: 320px;
