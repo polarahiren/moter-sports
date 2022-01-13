@@ -93,9 +93,11 @@ body{
     }
 }
 
+// END slick slider navigation
 .logo-slider,
 .cars-slider,
-.highlight-slider{
+.highlight-slider,
+.concierge-large-slider{
     @apply mb-10 md:mb-16;
 
     .slick-track{
@@ -114,6 +116,7 @@ body{
         left: 25px;
     }
 }
+// END slick slider navigation
 
 .logo-card{
     @apply px-4 md:px-6 flex items-center justify-center h-[200px] md:h-[200px] min-w-[280px] bg-white text-2xl lg:text-3xl xl:text-4xl text-primary uppercase tracking-[.25em] border border-primary transition duration-500 ease-in-out;
@@ -391,6 +394,69 @@ body{
 
 //large services card
 .large-services-card{
+    @apply p-4 pt-5 md:px-6 h-full w-full max-w-md md:max-w-screen-sm lg:max-w-screen-md flex flex-col text-cool-gray border-b-2 border-primary;
+    box-shadow: 0 1px 8px rgb(0 0 0 / 40%);
+}
+// END large services card
+
+
+//read more button global
+.global-read-more-btn{
+    @apply mt-3 pl-6 pr-8 py-3 text-xs inline-block text-white uppercase font-bold tracking-wide;
+    background: -webkit-linear-gradient(-20deg, rgba(59,59,59,1) 0%,rgba(59,59,59,1) 84%,rgba(183,0,0,1) 84%,rgba(183,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    clip-path: polygon(11% 0, 100% 0%, 89% 100%, 0% 100%);
+    transition: 0.3s all ease-in-out;
+
+    &:hover{
+        background: -webkit-linear-gradient(-20deg, rgba(59,59,59,1) 0%,rgba(59,59,59,1) 1%,rgba(183,0,0,1) 1%,rgba(183,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    }
+}
+// END read more button global
+
+
+//horizontal and vertical card slider
+
+.vertical-highlight-card,
+.horizontal-highlight-card{
+    .highlight-body{
+        .body-title{
+            @apply leading-[1.10em];
+        }
+    }
 }
 
-// END large services card
+.vertical-highlight-card{
+    .highlight-img{
+        @apply h-[260px];
+    }
+}
+.horizontal-highlight-card{
+    @apply flex;
+
+    .highlight-body{
+        @apply max-w-[320px] flex flex-col;
+    }
+    .highlight-img{
+        @apply flex-grow h-[320px];
+    }
+}
+
+// END horizontal and vertical card slider
+
+//same-height-carousel
+.same-height-carousel{
+    .slick-track{
+        display:flex;
+
+        .slick-slide{
+            height:auto;
+
+            & > div,
+            & > div > div{
+                height:100%;
+            }
+        }
+    }
+}
+
+//END same-height-carousel
