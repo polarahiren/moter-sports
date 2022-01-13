@@ -234,6 +234,11 @@ body{
         background-color: #ffffff;
         @apply px-4 md:px-6 lg:px-8 xl:px-10 py-6 md:pt-8 xl:pt-10 pb-6 flex-grow w-full md:w-1/2 bg-white text-cool-gray;
 
+        &:before{
+            content: "";
+            @apply w-1 h-16 bg-primary absolute top-16 md:top-24;
+        }
+
         .card-title{
             @apply md:mt-4 mb-4 md:mb-6 block text-xl md:text-2xl font-bold uppercase text-black hover:text-primary transition;
             &:hover{
@@ -256,6 +261,11 @@ body{
     &.img-in-right{
         .news-card-body{
             @apply md:order-1 md:pr-20 xl:pr-28;
+
+            &:before{
+                content: "";
+                @apply left-0;
+            }
         }
         .news-card-img{
             @apply md:order-2;
@@ -269,6 +279,11 @@ body{
     &.img-in-left{
         .news-card-body{
             @apply md:order-2 md:pl-20 xl:pl-28;
+
+            &:before{
+                content: "";
+                @apply left-0 md:left-auto md:right-0;
+            }
         }
         .news-card-img{
             @apply md:order-1;
