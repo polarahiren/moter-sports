@@ -309,12 +309,28 @@ body{
 }
 // END pagination css
 
-
+.news-details{
+    p, h5{
+        @apply text-sm lg:text-base;
+    }
+}
 
 .news-detail-banner{
     box-shadow: 0 1px 25px rgb(0 0 0 / 60%);
 
     .news-date{
         @apply top-full right-20 transform -translate-y-1/2;
+
+        @media screen and (max-width: 767px){
+            @apply w-16 h-16 p-3 top-full right-0 transform -translate-y-full text-sm;
+        }
+
     }
+}
+
+.spacing-p p{
+    @apply mb-6 md:mb-6;
+}
+.bottom-line{
+    @apply my-3 block h-1 w-[100px] md:w-[120px] lg:w-[150px] xl:w-[180px] bg-black;
 }
