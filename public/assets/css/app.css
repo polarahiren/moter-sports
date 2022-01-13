@@ -467,6 +467,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-1{
   margin-bottom: 0.25rem;
 }
+.mt-4{
+  margin-top: 1rem;
+}
 .ml-4{
   margin-left: 1rem;
 }
@@ -475,9 +478,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-0{
   margin-bottom: 0px;
-}
-.mt-4{
-  margin-top: 1rem;
 }
 .block{
   display: block;
@@ -639,6 +639,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-y-8 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
 .space-y-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -648,11 +653,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-.space-y-8 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 .space-x-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
@@ -795,6 +795,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pr-10{
   padding-right: 2.5rem;
+}
+.pt-4{
+  padding-top: 1rem;
+}
+.pb-8{
+  padding-bottom: 2rem;
 }
 .pb-10{
   padding-bottom: 2.5rem;
@@ -2099,37 +2105,137 @@ body {
   }
 }
 
+.news-img-with-text{
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-img-with-text > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.news-img-with-text{
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px){
+  .news-img-with-text{
+    margin-bottom: 2.5rem;
+  }
+  .news-img-with-text > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+  .news-img-with-text{
+    padding-bottom: 2.5rem;
+  }
+}
+.news-img-with-text .news-detail-img{
+  width: 100%;
+}
+@media (min-width: 768px){
+  .news-img-with-text .news-detail-img{
+    width: 41.666667%;
+  }
+}
+.news-img-with-text .news-detail-body{
+  width: 100%;
+}
+.news-img-with-text .news-detail-body p{
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px){
+  .news-img-with-text .news-detail-body p{
+    margin-bottom: 1.5rem;
+  }
+  .news-img-with-text .news-detail-body{
+    width: 58.333333%;
+  }
+  .news-img-with-text.news-img-right .news-detail-img{
+    order: 2;
+  }
+}
+@media (min-width: 1024px){
+  .news-img-with-text.news-img-right .news-detail-img{
+    padding-left: 5rem;
+  }
+}
+@media (min-width: 1280px){
+  .news-img-with-text.news-img-right .news-detail-img{
+    padding-left: 7rem;
+  }
+}
+@media (min-width: 768px){
+  .news-img-with-text.news-img-right .news-detail-body{
+    order: 1;
+  }
+  .news-img-with-text.news-img-right .news-detail-body{
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 1280px){
+  .news-img-with-text.news-img-right .news-detail-body{
+    padding-right: 4rem;
+  }
+}
+@media (min-width: 768px){
+  .news-img-with-text.news-img-left .news-detail-img{
+    order: 1;
+  }
+}
+@media (min-width: 1024px){
+  .news-img-with-text.news-img-left .news-detail-img{
+    padding-right: 5rem;
+  }
+}
+@media (min-width: 1280px){
+  .news-img-with-text.news-img-left .news-detail-img{
+    padding-right: 7rem;
+  }
+}
+@media (min-width: 768px){
+  .news-img-with-text.news-img-left .news-detail-body{
+    order: 2;
+  }
+  .news-img-with-text.news-img-left .news-detail-body{
+    padding-left: 2.5rem;
+  }
+}
+@media (min-width: 1280px){
+  .news-img-with-text.news-img-left .news-detail-body{
+    padding-left: 4rem;
+  }
+}
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(183 0 0 / var(--tw-text-opacity));
 }
-
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
   border-color: rgb(183 0 0 / var(--tw-border-opacity));
 }
-
 .focus\:ring-2:focus{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-
 .focus\:ring-primary:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(183 0 0 / var(--tw-ring-opacity));
 }
-
 .focus\:ring-opacity-20:focus{
   --tw-ring-opacity: 0.2;
 }
-
 @media (min-width: 640px){
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 @media (min-width: 768px){
   .md\:top-16{
     top: 4rem;
@@ -2169,20 +2275,20 @@ body {
   .md\:mt-10{
     margin-top: 2.5rem;
   }
-  .md\:mb-0{
-    margin-bottom: 0px;
-  }
   .md\:mb-10{
     margin-bottom: 2.5rem;
+  }
+  .md\:mb-0{
+    margin-bottom: 0px;
   }
   .md\:mb-14{
     margin-bottom: 3.5rem;
   }
-  .md\:mt-8{
-    margin-top: 2rem;
-  }
   .md\:mt-6{
     margin-top: 1.5rem;
+  }
+  .md\:mt-8{
+    margin-top: 2rem;
   }
   .md\:block{
     display: block;
@@ -2217,14 +2323,14 @@ body {
   .md\:w-\[120px\]{
     width: 120px;
   }
+  .md\:w-7\/12{
+    width: 58.333333%;
+  }
   .md\:w-auto{
     width: auto;
   }
   .md\:w-8\/12{
     width: 66.666667%;
-  }
-  .md\:w-7\/12{
-    width: 58.333333%;
   }
   .md\:w-5\/12{
     width: 41.666667%;
@@ -2290,11 +2396,17 @@ body {
   .md\:pl-20{
     padding-left: 5rem;
   }
-  .md\:pb-20{
-    padding-bottom: 5rem;
+  .md\:pb-10{
+    padding-bottom: 2.5rem;
   }
   .md\:pr-10{
     padding-right: 2.5rem;
+  }
+  .md\:pl-10{
+    padding-left: 2.5rem;
+  }
+  .md\:pb-20{
+    padding-bottom: 5rem;
   }
   .md\:text-left{
     text-align: left;
@@ -2316,7 +2428,6 @@ body {
     line-height: 2.25rem;
   }
 }
-
 @media (min-width: 1024px){
   .lg\:my-20{
     margin-top: 5rem;
@@ -2355,9 +2466,6 @@ body {
   .lg\:w-6\/12{
     width: 50%;
   }
-  .lg\:w-8\/12{
-    width: 66.666667%;
-  }
   .lg\:w-9\/12{
     width: 75%;
   }
@@ -2394,6 +2502,9 @@ body {
   .lg\:pl-20{
     padding-left: 5rem;
   }
+  .lg\:pr-20{
+    padding-right: 5rem;
+  }
   .lg\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2410,7 +2521,6 @@ body {
     letter-spacing: .25em;
   }
 }
-
 @media (min-width: 1280px){
   .xl\:mb-16{
     margin-bottom: 4rem;
@@ -2435,9 +2545,6 @@ body {
   }
   .xl\:w-\[180px\]{
     width: 180px;
-  }
-  .xl\:w-6\/12{
-    width: 50%;
   }
   .xl\:w-7\/12{
     width: 58.333333%;
@@ -2474,11 +2581,17 @@ body {
   .xl\:pt-10{
     padding-top: 2.5rem;
   }
+  .xl\:pl-28{
+    padding-left: 7rem;
+  }
   .xl\:pr-16{
     padding-right: 4rem;
   }
-  .xl\:pl-28{
-    padding-left: 7rem;
+  .xl\:pr-28{
+    padding-right: 7rem;
+  }
+  .xl\:pl-16{
+    padding-left: 4rem;
   }
   .xl\:text-base{
     font-size: 1rem;
