@@ -79,14 +79,32 @@ $(document).ready(function () {
         ]
     });
 
+
+    // concierge page
     $('.concierge-large-slider').slick({
         dots: false,
         arrows: true,
         infinite: true,
         speed: 200,
+        autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
+        variableWidth: true,
+        prevArrow:"<button type='button' class='slick-prev pull-left'><img src='assets/images/arrow-prev.png' alt='prev image' /></button>",
+        nextArrow:"<button type='button' class='slick-next pull-right'><img src='assets/images/arrow-next.png' alt='prev image' /></button>",
+    });
+
+
+    // EPA-large-slider
+    $('.EPA-large-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 200,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         variableWidth: true,
         prevArrow:"<button type='button' class='slick-prev pull-left'><img src='assets/images/arrow-prev.png' alt='prev image' /></button>",
         nextArrow:"<button type='button' class='slick-next pull-right'><img src='assets/images/arrow-next.png' alt='prev image' /></button>",

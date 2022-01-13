@@ -1471,37 +1471,39 @@ body {
   background: -webkit-linear-gradient(right, white 0%, white 17%, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0) 90%);
 }
 
-.logo-slider, .cars-slider, .highlight-slider, .concierge-large-slider{
+.logo-slider, .cars-slider, .highlight-slider, .concierge-large-slider, .EPA-large-slider{
   margin-bottom: 2.5rem;
 }
 
 @media (min-width: 768px){
-  .logo-slider, .cars-slider, .highlight-slider, .concierge-large-slider{
+  .logo-slider, .cars-slider, .highlight-slider, .concierge-large-slider, .EPA-large-slider{
     margin-bottom: 4rem;
   }
 }
-.logo-slider .slick-track, .cars-slider .slick-track, .highlight-slider .slick-track, .concierge-large-slider .slick-track{
+.logo-slider .slick-track, .cars-slider .slick-track, .highlight-slider .slick-track, .concierge-large-slider .slick-track, .EPA-large-slider .slick-track{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.logo-slider .slick-prev, .logo-slider .slick-next, .cars-slider .slick-prev, .cars-slider .slick-next, .highlight-slider .slick-prev, .highlight-slider .slick-next, .concierge-large-slider .slick-prev, .concierge-large-slider .slick-next{
+.logo-slider .slick-prev, .logo-slider .slick-next, .cars-slider .slick-prev, .cars-slider .slick-next, .highlight-slider .slick-prev, .highlight-slider .slick-next, .concierge-large-slider .slick-prev, .concierge-large-slider .slick-next, .EPA-large-slider .slick-prev, .EPA-large-slider .slick-next{
   z-index: 99;
   height: 3rem;
   width: 3rem;
 }
-.logo-slider .slick-prev:before, .logo-slider .slick-next:before, .cars-slider .slick-prev:before, .cars-slider .slick-next:before, .highlight-slider .slick-prev:before, .highlight-slider .slick-next:before, .concierge-large-slider .slick-prev:before, .concierge-large-slider .slick-next:before{
+.logo-slider .slick-prev:before, .logo-slider .slick-next:before, .cars-slider .slick-prev:before, .cars-slider .slick-next:before, .highlight-slider .slick-prev:before, .highlight-slider .slick-next:before, .concierge-large-slider .slick-prev:before, .concierge-large-slider .slick-next:before, .EPA-large-slider .slick-prev:before, .EPA-large-slider .slick-next:before{
   display: none;
 }
 .logo-slider .slick-next,
 .cars-slider .slick-next,
 .highlight-slider .slick-next,
-.concierge-large-slider .slick-next {
+.concierge-large-slider .slick-next,
+.EPA-large-slider .slick-next {
   right: 25px;
 }
 .logo-slider .slick-prev,
 .cars-slider .slick-prev,
 .highlight-slider .slick-prev,
-.concierge-large-slider .slick-prev {
+.concierge-large-slider .slick-prev,
+.EPA-large-slider .slick-prev {
   left: 25px;
 }
 
@@ -2470,6 +2472,10 @@ body {
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(183 0 0 / var(--tw-text-opacity));
+}
+.hover\:text-cool-gray:hover{
+  --tw-text-opacity: 1;
+  color: rgb(104 104 104 / var(--tw-text-opacity));
 }
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
