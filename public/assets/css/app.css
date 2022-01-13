@@ -783,10 +783,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 .pb-6{
   padding-bottom: 1.5rem;
 }
@@ -2332,9 +2328,6 @@ body {
   .md\:w-8\/12{
     width: 66.666667%;
   }
-  .md\:w-5\/12{
-    width: 41.666667%;
-  }
   .md\:w-9\/12{
     width: 75%;
   }
@@ -2378,10 +2371,6 @@ body {
   .md\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-  .md\:py-10{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
   }
   .md\:px-10{
     padding-left: 2.5rem;

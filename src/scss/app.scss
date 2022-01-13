@@ -335,8 +335,9 @@ body{
     @apply my-3 block h-1 w-[100px] md:w-[120px] lg:w-[150px] xl:w-[180px] bg-black;
 }
 
-//news details image with text
 
+
+//news details image with text
 .news-img-with-text{
     @apply flex flex-wrap pt-4 pb-8 md:pb-10 mb-8 md:mb-10 space-y-8 md:space-y-0;
 
