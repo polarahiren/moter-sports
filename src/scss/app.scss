@@ -392,9 +392,15 @@ body{
     background-color: #ffffff;
 }
 
+
+
+.concierge-large-slider .slick-list{
+    @apply overflow-visible;
+}
+
 //large services card
 .large-services-card{
-    @apply p-4 pt-5 md:px-6 h-full w-full max-w-md md:max-w-screen-sm lg:max-w-screen-md flex flex-col text-cool-gray border-b-2 border-primary;
+    @apply p-4 pt-5 md:px-6 h-full w-full max-w-xs sm:max-w-md md:max-w-screen-sm lg:max-w-screen-md flex flex-col text-cool-gray border-b-2 border-primary;
     box-shadow: 0 1px 8px rgb(0 0 0 / 40%);
 }
 // END large services card
@@ -418,6 +424,7 @@ body{
 
 .vertical-highlight-card,
 .horizontal-highlight-card{
+    @apply max-w-xs md:max-w-[none];
     .highlight-body{
         .body-title{
             @apply leading-[1.10em];
@@ -431,17 +438,19 @@ body{
     }
 }
 .horizontal-highlight-card{
-    @apply flex;
+    @apply flex flex-col md:flex-row;
 
     .highlight-body{
-        @apply max-w-[320px] flex flex-col;
+        @apply md:max-w-[320px] flex flex-col order-2 md:order-1;
     }
     .highlight-img{
-        @apply flex-grow h-[320px];
+        @apply flex-grow h-[260px] md:h-[320px] order-1 md:order-2;
     }
 }
 
 // END horizontal and vertical card slider
+
+
 
 //same-height-carousel
 .same-height-carousel{
